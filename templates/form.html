@@ -1,0 +1,5 @@
+<form method="post" action="{{ url_for('create') }}">
+<input type="hidden" name="csrf" value="{{ session.csrf }}">
+<label>Task title<input name="title" maxlength="160" required placeholder="e.g. Review the quarterly finance survey" value="{{ request.form.get('title','') }}"></label>
+<div class="fields"><label>Expertise<select name="area">{% for area in areas %}<option {% if request.form.get('area')==area %}selected{% endif %}>{{ area }}</option>{% endfor %}</select></label><label>Priority<select name="priority"><option>Normal</option><option {% if request.form.get('priority')=='High' %}selected{% endif %}>High</option></select></label></div>
+<button>Create &amp; route</button></form>

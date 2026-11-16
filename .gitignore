@@ -1,0 +1,11 @@
+.venv/
+.idea/
+__pycache__/
+*.pyc
+instance/
+session-exports/
+/project_instructions.txt
+/SESSION_MAP.md
+/AGENTS.md
+/Manual Tests.docx
+/tools/export_session.py
