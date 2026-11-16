@@ -2,7 +2,20 @@
 
 A local operator workspace for routing tasks to contributors with matching expertise. Python, Flask, SQLite, server-rendered HTML/CSS, and unittest; no frontend build or external service.
 
-## Run in PyCharm / PowerShell
+## Requirements
+
+- Python 3.14
+- The commands below use Windows PowerShell and PyCharm Terminal.
+
+## Setup Virtual Environment
+
+From the project root, create a virtual environment:
+
+```powershell
+py -3.14 -m venv .venv
+```
+
+## Install Dependencies and Run
 
 From the project root:
 
@@ -47,4 +60,4 @@ Tests use temporary databases, injected time, and seeded randomness. They cover 
 
 ## Verification
 
-Automated checks and HTTP smoke checks are recorded in `VERIFICATION.md`, along with human browser appearance, responsive behavior, and the full manual checklist verfied by user review.
+Automated tests, HTTP smoke checks, and eight user-performed workflow checks are documented in `VERIFICATION.md`.

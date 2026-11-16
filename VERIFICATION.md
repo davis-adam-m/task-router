@@ -10,12 +10,11 @@ The following checks were performed by Codex during implementation. They are sep
 - Final automated command: `.\.venv\Scripts\python.exe -m unittest discover -s tests -v` — **15 tests passed**, approximately 3 seconds.
 - Automated coverage: atomic state/history rollback; database constraint on active assignments; matching expertise; concurrent routing and intervention; stale-result logging without replacing accepted/manual assignments; retry and no-match recovery; unresolved requests; acceptance and explicit reopening; decline/failure reasons; rejecting responses to replaced offers; persisted request recovery using a new router instance; 5–20-second simulation delays and random unresolved outcomes; background worker progress without browser activity; Flask pages/forms, CSRF, validation, and preservation of invalid task input.
 - Live smoke check: ran `.\.venv\Scripts\python.exe app.py` with debug/reloader off; used HTTP with cookies and CSRF to submit a deterministic matching request for seed task #1; made no requests for 21 seconds; fetched its detail page and confirmed an offer plus corresponding history. This verifies real worker progress independent of browser requests. The server was stopped afterward. Seed task #1 retains that offer in the local ignored database.
-- `git diff --check` reported no whitespace errors in tracked changes. New Python modules were imported/exercised by tests; the export utility ran successfully.
-- Saved a native project-session JSONL snapshot using `tools/export_session.py`. Refresh it after final conversation and review before sharing. No repository was published, and no commits or visibility changes were made.
+- `git diff --check` reported no whitespace errors in tracked changes. New Python modules were imported/exercised by tests.
 
 ## User-performed manual checks
 
-Source: [Manual Tests.docx](<Manual Tests.docx>). The user reported that all checks passed; Codex reviewed the documented results but did not independently repeat these manual checks.
+The user reported that all checks passed; Codex reviewed the documented results but did not independently repeat these manual checks.
 
 | Check | Documented scenario and result | User outcome |
 |---|---|---|
